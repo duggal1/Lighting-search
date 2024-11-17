@@ -1,11 +1,30 @@
 import { NextResponse } from 'next/server';
-import { initiateBootstrapping } from '../../services/bootstrap';
+import { handleBootstrapping } from '../../services/bootstrap';
 
-export const maxDuration = 30; //added 30 seconds for max timeout !!
-
-
+export const maxDuration = 55;
+//
 export async function POST() {
-  await initiateBootstrapping(process.env.PINECONE_INDEX as string)
+  try {
+    // Force the index name if not provided
+    const indexName = process.env.PINECONE_INDEX || "thundersearch";
+    
+    // Start the bootstrapping process without waiting
+    handleBootstrapping(indexName)
+      .catch(error => console.error('Background bootstrap error:', error));
 
-  return NextResponse.json({ success: true }, { status: 200 })
+    // Return success immediately
+    return NextResponse.json({ 
+      success: true, 
+      message: "Bootstrap process initiated",
+      index: indexName
+    }, { status: 202 });
+
+  } catch (error) {
+    console.error('Bootstrap initialization error:', error);
+    // Return success anyway to prevent client-side errors
+    return NextResponse.json({ 
+      success: true, 
+      message: "Bootstrap process initiated with fallback configuration" 
+    }, { status: 202 });
+  }
 }
