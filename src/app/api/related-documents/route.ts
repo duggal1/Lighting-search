@@ -3,6 +3,7 @@ import { readMetadata } from '@/app/services/bootstrap';
 import path from 'path';
 import { promises as fs } from 'fs';
 
+export const maxDuration = 30;//added  30 seconds for max timeout
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
@@ -39,7 +40,7 @@ export async function GET(request: Request) {
       .slice(0, 6)
       .map((doc: { title: any; topic: any; date: any; outcome: any; category: any; }) => ({
         title: doc.title || 'Untitled',
-        topic: doc.topic || 'Unknown Topic',
+        topic: doc.topic || 'Unknown Topic???',
         date: doc.date || 'Unknown Date',
         outcome: doc.outcome || 'No outcome specified',
         category: doc.category || 'Uncategorized'

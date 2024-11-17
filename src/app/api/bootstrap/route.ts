@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { initiateBootstrapping } from '../../services/bootstrap';
 
-export const maxDuration = 30; //added
+export const maxDuration = 30; //added 30 seconds for max timeout !!
 
 
 export async function POST() {

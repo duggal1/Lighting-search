@@ -4,7 +4,7 @@ import { VoyageEmbeddings } from "@langchain/community/embeddings/voyage";
 import { PineconeStore } from "@langchain/pinecone";
 
 
-export const maxDuration = 30;
+export const maxDuration = 30; //added 30 seconds for max timeout
 export async function POST(req: Request) {
   const { query } = await req.json();
 
@@ -63,7 +63,7 @@ export async function POST(req: Request) {
       }
     }, { status: 200 });
   } catch (error) {
-    console.error("Error performing similarity search:", error);
+    console.error("Error performing similarity search???:", error);
     return NextResponse.json(
       { error: "Failed to perform similarity search" },
       { status: 500 }
