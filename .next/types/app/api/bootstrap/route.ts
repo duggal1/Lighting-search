@@ -1,4 +1,4 @@
-// File: /Users/harshitduggal/Downloads/thunder-search/src/app/api/bootstrap/route.ts
+// File: /Users/harshitduggal/Downloads/thunder-search-1/src/app/api/bootstrap/route.ts
 import * as entry from '../../../../../src/app/api/bootstrap/route.js'
 import type { NextRequest } from 'next/server.js'
 
