@@ -1,51 +1,70 @@
-# Environment variables
-.env
-.env.local
-.env.development
-.env.production
-.env*.local
+# Ignore environment variable files
+/.env
+/.env.*
 
-# Documents folder
-/docs/
-/docs/*
-/docs/**/*
+# Ignore docs folder in the root directory
+/docs
 
-# Dependencies
+# Node.js dependencies
 /node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Compiled output
+/dist
+/build
+
+# Temporary files
+tmp/
+*.tmp
+*.swp
+
+# Ignore IDE and editor-specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency directories
 /.pnp
 .pnp.js
 
 # Testing
 /coverage
+.nyc_output
 
-# Next.js
-/.next/
-/out/
-
-# Production
-/build
-
-# Misc
-.DS_Store
-*.pem
-
-# Debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Local env files
-.env*.local
-
-# Vercel
-.vercel
+# Parcel-bundler cache
+.cache
 
 # TypeScript
-*.tsbuildinfo
-next-env.d.ts
+/*.tsbuildinfo
 
-# IDE specific files
-.idea
-.vscode
-*.swp
-*.swo
+# Environment files for specific tools
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore any other custom docs folder in the root
+/docs
+
+# Ignore lock files for package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore Docker files
+docker-compose.override.yml
+
+# Ignore backup files
+*.bak
+*.orig
