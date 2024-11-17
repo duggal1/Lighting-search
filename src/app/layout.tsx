@@ -19,38 +19,38 @@ export default function RootLayout({ children }: LayoutProps) {
 
 export const viewport: Viewport = {
   themeColor: "#3B82F6", // blue-400
-  colorScheme: "light", 
+  colorScheme: "light",
   initialScale: 1,
   width: "device-width",
 };
 
 export const metadata: Metadata = {
   title: {
-    template: "Stargate | %s",
-    default: "Stargate | NextJS SaaS Landing",
+    template: "Thunder Search AI | %s",
+    default: "Thunder Search AI | Powerful Semantic Search Engine",
   },
   description:
-    "Stargate is a modern SaaS Landing Page template built with NextJS. It's designed to provide a seamless and engaging experience for showcasing software products, especially those in the tech and startup niches.",
+    "Thunder Search AI is an advanced semantic search engine designed to deliver powerful, accurate, and fast search results, revolutionizing the way we retrieve information.",
  
-  metadataBase: new URL("https://stargate.nfteam.eu/"),
+  metadataBase: new URL("https://thundersearch.ai/"),
   openGraph: {
-    title: "Stargate | NextJS SaaS Landing",
-    siteName: "Stargate | NextJS SaaS Landing", 
+    title: "Thunder Search AI | Powerful Semantic Search Engine",
+    siteName: "Thunder Search AI",
     description:
-      "Stargate is a modern SaaS Landing Page template built with NextJS. It's designed to provide a seamless and engaging experience for showcasing software products, especially those in the tech and startup niches.",
-    url: "https://stargate.nfteam.eu/",
+      "Thunder Search AI is an advanced semantic search engine designed to deliver powerful, accurate, and fast search results, revolutionizing the way we retrieve information.",
+    url: "https://thundersearch.ai/",
     type: "website",
-    locale: "hu_HU",
+    locale: "en_US",
   },
   twitter: {
-    title: "Stargate | NextJS SaaS Landing",
-    creator: "@nfteam_eu",
-    site: "@nfteam_eu",
+    title: "Thunder Search AI | Powerful Semantic Search Engine",
+    creator: "@thundersearchai",
+    site: "@thundersearchai",
     description:
-      "Stargate is a modern SaaS Landing Page template built with NextJS. It's designed to provide a seamless and engaging experience for showcasing software products, especially those in the tech and startup niches.",
+      "Thunder Search AI is an advanced semantic search engine designed to deliver powerful, accurate, and fast search results, revolutionizing the way we retrieve information.",
     card: "summary_large_image",
   },
   alternates: {
-    canonical: "https://stargate.nfteam.eu/",
+    canonical: "https://thundersearch.ai/",
   },
 };
